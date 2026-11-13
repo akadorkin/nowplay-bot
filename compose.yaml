@@ -1,0 +1,9 @@
+services:
+  nowplay:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    volumes:
+      - state:/data   # токены и куки, которые бот сохранил сам
+volumes:
+  state:
